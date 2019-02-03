@@ -1,0 +1,25 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <a class="logo" routerLink=""><span>ikismail</span></a>
+        <button mat-button (click)="home()">Home</button>
+        <button mat-button (click)="allProducts()">Our products</button>
+        <span class="spacer"></span>
+        <button mat-icon-button>
+            <mat-icon aria-label="Add to favorite">favorite</mat-icon>
+        </button>
+        <span class="favorite">0</span>
+        <button mat-icon-button>
+            <mat-icon aria-label="Add to cart">shopping_cart</mat-icon>
+        </button>
+        <span class="cart">0</span>
+        <button mat-icon-button>
+            <mat-icon aria-label="Sign in or Sign up">exit_to_app</mat-icon>
+        </button>
+        <span class="auth">SignIn/SignUp</span>
+        <button mat-icon-button>
+            <mat-icon aria-label="Select language">public</mat-icon>
+        </button>
+        <span class="language">Angular v6</span>
+    </mat-toolbar-row>
+</mat-toolbar>
