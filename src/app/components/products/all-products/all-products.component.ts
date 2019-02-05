@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import { DataService } from '../../../services/data.service';
 @Component({
 	selector: 'app-all-products',
 	templateUrl: './all-products.component.html',
-	styleUrls: ['./all-products.component.css']
+	styleUrls: ['./all-products.component.scss']
 })
 export class AllProductsComponent implements OnInit {
 

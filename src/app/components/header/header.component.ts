@@ -3,22 +3,20 @@ import { Router } from '@angular/router';
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.css']
+	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
 	constructor(
-		private router: Router,
-	) { }
+        private router: Router,
+    ) { }
 
 	ngOnInit() {
 	}
-
-	home(){
-		this.router.navigate(['']);
-	}
-
-	allProducts(){
-		this.router.navigate(['all-products']);
-	}
+    home(){
+        this.router.navigate(['']);
+    }
+    allProducts(){
+        this.router.navigate(['all-products']);
+    }
 }

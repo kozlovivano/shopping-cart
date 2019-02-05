@@ -1,49 +1,48 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="brand_select">By Brands: </label>
-                <select class="form-control" id="brand_select">
-                    <option *ngFor="let category of data.categories" value="category.id">{{ category.name }}</option>
-                </select>
-            </div>
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-            </ul>
-        </div>
-        <div class="col-md-9">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 mb-2" *ngFor="let product of data.products">
-                        <mat-card class="example-card">
-                            <img *ngIf="product.image" width="237" height="134" mat-card-image src="{{ product.image }}" alt="Photo of a Shiba Inu">
-                            <mat-card-content class="text-center">
-                                <a class="text-muted"><h5>{{ product.sub_category }}</h5></a>
-                                <p class="card-title">
-                                    <strong>
-                                        <a>{{ product.name }}</a>
-                                    </strong>
-                                </p>
-                                <p class="card-text">
-                                    {{ product.description }}
-                                </p>
-                                <mat-divider></mat-divider>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <span>{{ product.price }}</span>
-                                <button mat-icon-button>
-                                    <mat-icon class="favorite" aria-label="Add to favorite">favorite</mat-icon>
-                                </button>
-                                <button mat-icon-button>
-                                    <mat-icon class="cart" aria-label="Add to favorite">shopping_cart</mat-icon>
-                                </button>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
+    <mat-grid-list cols="12" rowHeight="600px">
+        <mat-grid-tile [colspan]="3">
+            <div class="wrapper">
+                <div class="form-group">
+                    <label for="brand_select">By Brands: </label>
+                    <select class="form-control" id="brand_select">
+                        <option *ngFor="let category of data.categories" value="category.id">{{ category.name }}</option>
+                    </select>
+                    <ul class="list-group">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" *ngFor="let product of data.products">
+            <div class="container">
+                <mat-card>
+                    <img *ngIf="product.image" width="237" height="134" mat-card-image src="{{ product.image }}" alt="Photo of a Shiba Inu">
+                    <mat-card-content class="text-center">
+                        <a class="text-muted"><h5>{{ product.sub_category }}</h5></a>
+                        <p class="card-title">
+                            <strong>
+                                <a>{{ product.name }}</a>
+                            </strong>
+                        </p>
+                        <p class="card-text">
+                            {{ product.description }}
+                        </p>
+                        <mat-divider></mat-divider>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <span>{{ product.price }}</span>
+                        <button mat-icon-button>
+                            <mat-icon class="favorite" aria-label="Add to favorite">favorite</mat-icon>
+                        </button>
+                        <button mat-icon-button>
+                            <mat-icon class="cart" aria-label="Add to favorite">shopping_cart</mat-icon>
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

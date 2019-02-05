@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 *,
 *::before,
@@ -10,79 +11,17 @@
 body{
     margin: 0px;
     line-height: 1.5;
-    box-sizing: border-box;
 }
 
 a, a:hover{
     text-decoration: none;
-    color: white;
-}
-.text-muted{
-    color: #6c757d !important;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-bottom: 0.5rem;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
-h5, .h5 {
-    font-size: 1.25rem;
-}
-.text-center {
-    text-align: center !important;
-}
-.container{
-    max-width: 1140px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.spacer{
-    flex: 1 1 auto;
-}
 
-/* Grid system */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.col-md-3, .col-sm-4, .col-md-9{
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.col-md-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-.col-sm-4 {
-    flex: 0 0 33.33333333%;
-    max-width: 33.33333333%;
-}
-.col-md-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-}
-.mb-2, .my-2 {
-    margin-bottom: 0.5rem !important;
-}
-/* Form elements */
-.form-group{
-    margin-bottom: 1rem;
-}
 button, select {
     text-transform: none;
 }
@@ -96,6 +35,30 @@ label{
     display: inline-block;
     margin-bottom: 0.5rem;
 }
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.wrapper{
+    width: 247px;
+}
+
+.form-group{
+    width: 100%;
+    margin-bottom: 1rem;
+    display: block;
+}
+
 .form-control{
     display: block;
     width: 100%;
@@ -110,7 +73,6 @@ label{
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
 .list-group {
     display: flex;
     flex-direction: column;
@@ -134,4 +96,8 @@ label{
     margin-bottom: -1px;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.mat-grid-tile .mat-figure{
+    align-items: unset !important;
+    justify-content: left !important;
 }
