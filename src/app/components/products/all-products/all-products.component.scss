@@ -1,44 +1,55 @@
 mat-card{
     border-radius: 0.25rem;
-}
-img{
-    border-radius: 0.25rem;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.card-title {
-    margin-bottom: 0.75rem;
-    font-size: 16px;
-}
-mat-card-content{
-    position: relative;
-}
-mat-card-actions{
-    position: relative;
-    margin-bottom: 0px;
-}
-mat-card-actions span{
-    margin-left: 30px;
-    margin-right: 40px;
-}
-.favorite{
-    font-size: 18px;
-    color: #3f51b5;
-}
-.cart{
-    font-size: 18px;
-    color: #757575;
-}
-.card-title a{
-    cursor: pointer;
-    text-decoration: none;
-    color: #007bff;
-    transition: all 0.2s ease-in-out;
-}
-.card-text {
-    color: #747373;
-    font-size: 0.9rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    border: 0;
     font-weight: 400;
-    line-height: 20px;
-    height: 60px;
-    overflow: hidden;
+    margin-top: 5px;
+    img{
+        border-radius: 0.25rem;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    mat-card-content{
+        position: relative;
+        text-align: center;
+        .text-muted{
+            color: #6c757d !important;
+        }
+        h5{
+            font-size: 1.25rem;
+        }
+        .card-title {
+            margin-bottom: 0.75rem;
+            font-size: 16px;
+            a{
+                cursor: pointer;
+                text-decoration: none;
+                color: #007bff;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        .card-text {
+            color: #747373;
+            font-size: 0.9rem;
+            font-weight: 400;
+            line-height: 20px;
+            height: 60px;
+            overflow: hidden;
+        }
+    }
+    mat-card-actions{
+        position: relative;
+        margin-bottom: 0px;
+        span{
+            margin-left: 30px;
+            margin-right: 40px;
+        }
+        .favorite{
+            font-size: 18px;
+            color: #3f51b5;
+        }
+        .cart{
+            font-size: 18px;
+            color: #757575;
+        }
+    }
 }
