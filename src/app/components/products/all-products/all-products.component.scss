@@ -39,9 +39,15 @@ mat-card{
     mat-card-actions{
         position: relative;
         margin-bottom: 0px;
+        position: relative;
         span{
-            margin-left: 30px;
-            margin-right: 40px;
+            margin-left: 2vw;
+            line-height: 2.5;
+        }
+        .actions{
+            position: absolute;
+            top: 8px;
+            right: 20px;
         }
         .favorite{
             font-size: 18px;

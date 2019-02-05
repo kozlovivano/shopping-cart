@@ -1,6 +1,6 @@
 <div class="container">
-    <mat-grid-list cols="12" rowHeight="382px">
-        <mat-grid-tile [colspan]="3" [rowspan]="2">
+    <mat-grid-list cols="12" rowHeight="382px" (window:resize)="onResize($event)">
+        <mat-grid-tile [colspan]="mainCol" [rowspan]="sideRow">
             <div class="wrapper">
                 <div class="form-group">
                     <label for="brand_select">By Brands: </label>
@@ -16,7 +16,7 @@
             </div>
 
         </mat-grid-tile>
-        <mat-grid-tile [colspan]="3" *ngFor="let product of data.products">
+        <mat-grid-tile [colspan]="mainCol" *ngFor="let product of data.products">
             <div class="container">
                 <mat-card>
                     <img *ngIf="product.image" width="237" height="134" mat-card-image src="{{ product.image }}" alt="Photo of a Shiba Inu">
@@ -34,12 +34,14 @@
                     </mat-card-content>
                     <mat-card-actions>
                         <span>{{ product.price }}</span>
-                        <button mat-icon-button>
-                            <mat-icon class="favorite" aria-label="Add to favorite">favorite</mat-icon>
-                        </button>
-                        <button mat-icon-button>
-                            <mat-icon class="cart" aria-label="Add to favorite">shopping_cart</mat-icon>
-                        </button>
+                        <div class="actions">
+                            <button mat-icon-button>
+                                <mat-icon class="favorite" aria-label="Add to favorite">favorite</mat-icon>
+                            </button>
+                            <button mat-icon-button>
+                                <mat-icon class="cart" aria-label="Add to favorite">shopping_cart</mat-icon>
+                            </button>
+                        </div>
                     </mat-card-actions>
                 </mat-card>
             </div>
